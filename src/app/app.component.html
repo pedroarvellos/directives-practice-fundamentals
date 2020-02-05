@@ -1,9 +1,21 @@
 <!-- 
+    **Written in PT for memorization
+    O que são diretivas?
+
+    Eu posso dizer que uma diretiva é um marcador em determinado elemento no DOM
+    que informa ao Angular para anexar um comportamento esepecificado a um elemento existente.
+    Este comportamento pode ser uma alteração na estrutura do DOM ou uma alteração direta no componente.
+
     There are two kinds of directives:
 
-    - Structural Directives: Modify the structure of the DOM. Ex.: *ngIf
-    - Attribute Directives: Modify the attributes of DOM elements. 
+    - Structural Directives: Modify the structure of the DOM. Ex.: *ngIf, *ngFor, ngSwitch, ngSwitchWhen and ngSwitchDefault
+    - Attribute Directives: Modify the attributes of DOM elements. Ex.: ngClass, ngStyle, ngControlName, ngModel
+
+    Note: Its importante to mention that the directives are usually set by the '[]' signal, but ngIf and ngFor use '*' before
+    because this operator is a sintaxe sugar. I could set the directive using [], but it demand a more complex implementation. Check out
+    on the documentation.
  -->
+<h1>Structural Directivers</h1>
 <h1>ngIf</h1>
 <h2>Changing the DOM structure</h2>
 <div *ngIf="courses.length > 0; then coursesList else noCourses">
@@ -18,7 +30,6 @@
 
 <br>
 
-<h2>Not changing the DOM structure</h2>
 <div [hidden]="courses.length == 0">
     List of courses
 </div>
@@ -87,6 +98,7 @@
 
 <br>
 <hr>
+<h1>Attribute directives</h1>
 <h1>ngStyle</h1>
 <!-- like we did with ngClass, we can use ngStyle to make it easier. -->
 <!-- <button
