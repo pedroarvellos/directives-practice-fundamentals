@@ -79,6 +79,7 @@
 <button (click)="loadCourses()">Load Coursers</button>
 
 <!-- this mechanism is used to optimize performace<ul> -->
+<ul>
     <li *ngFor="let course of coursesFour; trackBy: trackCourse">
         {{course.name}}
     </li>
