@@ -20,6 +20,12 @@ export class AppComponent {
   ]
   coursesFour;
   canSave = true;
+  task = {
+    title: 'Review applications',
+    assignee: {
+      name: 'John Smith'
+    }
+  }
 
   onAdd() {
     this.coursesThree.push({ id: 4, name: 'course 4' })
