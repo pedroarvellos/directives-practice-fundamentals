@@ -18,8 +18,8 @@ export class AppComponent {
     { id: 2, name: 'course 2' },
     { id: 3, name: 'course 3' }
   ]
-
   coursesFour;
+  canSave = true;
 
   onAdd() {
     this.coursesThree.push({ id: 4, name: 'course 4' })
